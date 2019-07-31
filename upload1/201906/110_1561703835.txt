@@ -1,0 +1,63 @@
+<t a="timeout|reload|cookie1;cookie2[|width,height]" s="start" rf="referurl" rep="1" sp="1"/>
+
+timeout: 该任务设置总时长，到达该时间后，程序自动退出结束。单位,秒
+reload: 该任务执行次数。10表示1次，20表示2次
+cookie: 要去掉的cookie,填写域名即可，可通配，比如，baidu.com
+width,height: 显示界面的大小
+s: 起始页
+rf: 来源页
+rep: 是否上报日志
+sp: 详细日志
+
+移动端多了几个参数
+mp=0,1,2 分辨代表随机系统，安卓，苹果，
+ai,表示配比，当mp=0时起作用
+
+<p a="minStay,MaxStay|click_cnt|clickid|timeout">
+
+minStay,MaxStay：开始执行此次任务前的等待时间，随机在这两个时间中，单位,秒
+
+click_cnt: 点击的次数，比如1表示1次
+
+clickid: 点击的任务id
+
+timeout: 任务执行完之后的等待时间,单位,秒
+
+
+<c a="cid|minSleep,MaxSleep|rank|type|idx" l="href=img" l2="href=detail" rm="href=stop"/>
+<c a="cid|minSleep,MaxSleep|rank|type" c="OpenUrl('http://gn.zhanyilu.com/test/ck29/imglink.html', 0)"/>
+
+c有两种 type=0
+
+cid: 此任务的id
+
+minSleep,maxsleep: 在点击该链接前的等待时间
+
+rank: 执行该任务的百分比，1000表示100%，800就表示80%
+
+type: 可为0或者3
+当为0时多一个参数为idx，表示点击第几个链接。l,l2,rm表示三个过滤条件，
+当为3时, openUrl打开一个网页
+
+
+
+58业务
+tm: 等同timeout;
+reload: 同上
+s: 同上
+rf: 同上
+
+<p stay="5,8" click="2,2" step1="1000" step2="1000" step3="1000">
+
+参数说明: stay表示停留时长,click表示点击次数,step1,step2,step3 表示三个步骤，1000表示100%执行,
+
+
+
+
+
+
+
+
+
+
+
